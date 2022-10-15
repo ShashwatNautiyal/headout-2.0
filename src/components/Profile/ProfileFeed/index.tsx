@@ -6,20 +6,6 @@ import Image from '../../Image';
 import reviews from '../../../reviews.json';
 
 export const ProfileFeed = ({ userPhotos }: { userPhotos?: UserPhoto[] }) => {
-  const nomadBadgeClassname = 'text-green-700 bg-green-200';
-  const wanderBadgeClassname = 'text-yellow-700 bg-yellow-200';
-  const explorerBadgeClassname = 'text-blue-700 bg-blue-200';
-  const travelerBadgeClassname = 'text-red-700 bg-red-200';
-
-  const badgeClassname = [
-    nomadBadgeClassname,
-    wanderBadgeClassname,
-    explorerBadgeClassname,
-    travelerBadgeClassname
-  ];
-
-  const BADGE = ['Nomad', 'Wanderer', 'Explorer', 'Traveller'];
-
   if (userPhotos && userPhotos.length === 0) {
     return <p className='text-lg'>This user has not posted anything yet</p>;
   }
