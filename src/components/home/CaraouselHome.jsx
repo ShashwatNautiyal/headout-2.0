@@ -19,16 +19,33 @@ const imgStyle = {
     height: "550px"
 };
 
+const style = {
+    marginLeft: "60px",
+    top: "10%",
+    height: "40%",
+    width: "25%",
+    color: "white",
+    position: "absolute",
+    fontWeight: "bold",
+    fontSize: "3em",
+    textAlign: "left",
+}
+
 const CaraouselHome = () => {
     return (
-        <Carousel swipeable={true} showArrows={false} autoPlay={true} showThumbs={false} showStatus={false} showIndicators={true} infiniteLoop={true}>
+        <Carousel swipeable={true} showArrows={false} autoPlay={false} showThumbs={false} showStatus={false} showIndicators={true} infiniteLoop={true}>
             {
                 images.map((image, index) => {
                     return (
-                        <div key={index} >
-                            <img src={image.url} style={imgStyle} />
-                            <a className="legend" style={{ width: "15%", fontSize: "0.8em" }} href={image.packageSrc}>View Package</a>
-                        </div>
+                        <>
+                            <div key={index} >
+                                <img src={image.url} style={imgStyle} />
+                                <a className="legend" style={{ width: "15%", fontSize: "0.8em" }} href={image.packageSrc}>View Package</a>
+                            </div>
+                            <div style={style}>
+                                <p>Best Things to Do in London</p>
+                            </div>
+                        </>
                     )
                 })
             }
