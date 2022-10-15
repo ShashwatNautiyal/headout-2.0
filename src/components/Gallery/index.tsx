@@ -5,6 +5,7 @@ import Image from '../Image';
 import { HiOutlineTicket } from 'react-icons/hi';
 
 import reviews from '../../reviews.json';
+import Link from 'next/link';
 
 export const Gallery = ({ searchResults }: { searchResults: Search }) => {
   const { results } = searchResults;
@@ -43,24 +44,26 @@ export const Gallery = ({ searchResults }: { searchResults: Search }) => {
           />
           <div className='absolute top-0 flex flex-col justify-end w-full h-full bg-transparent hover:bg-black/50 transition-[background] font-medium text-base hover:backdrop-blur-sm group p-4 cursor-pointer'>
             <div className='flex flex-col gap-2 opacity-0 translate-y-10 group-hover:translate-y-0 group-hover:opacity-100 text-white transition-[opacity, background] duration-500'>
-              <div className='flex items-center gap-2'>
-                <img
-                  className='h-10 w-10 rounded-full'
-                  src={resultPhoto.user.profile_image.medium}
-                  alt={resultPhoto.user.name}
-                />
-                <div>
-                  <div className='text-lg font-medium'>{resultPhoto.user.name}</div>
-                  <div
-                    className={classNames(
-                      badgeClassname[index % 4],
-                      'text-xs font-medium  px-2 rounded-full w-fit'
-                    )}
-                  >
-                    {BADGE[index % 4]}
+              <Link href={`/user/${resultPhoto.user.username}`}>
+                <div className='flex items-center gap-2 hover:bg-black/25 px-1 py-2 rounded-md w-fit'>
+                  <img
+                    className='h-10 w-10 rounded-full'
+                    src={resultPhoto.user.profile_image.medium}
+                    alt={resultPhoto.user.name}
+                  />
+                  <div className='flex flex-col'>
+                    <div className='text-lg font-medium'>{resultPhoto.user.name}</div>
+                    <div
+                      className={classNames(
+                        badgeClassname[index % 4],
+                        'text-xs font-medium  px-2 rounded-full w-fit'
+                      )}
+                    >
+                      {BADGE[index % 4]}
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
               <div className='h-fit'>
                 <div className='text-base leading-5 font-medium'>
                   {resultPhoto.description?.length > 100
