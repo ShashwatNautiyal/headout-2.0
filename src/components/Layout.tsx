@@ -36,11 +36,11 @@ const navPages = [
 export const Layout = ({ children }: { children: ReactNode }) => {
   return (
     <>
-      <div className='flex flex-col gap-8 max-w-[1200px] mx-auto py-4 xl:px-0 px-4'>
+      <div className='flex flex-col gap-8 max-w-[1300px] mx-auto py-4 xl:px-0 px-4'>
         <Navbar />
         <NavLinks />
       </div>
-      <div className='max-w-[1200px] mx-auto xl:px-0 px-4'>{children}</div>
+      <div className='max-w-[1300px] mx-auto xl:px-0 px-4'>{children}</div>
     </>
   );
 };
