@@ -48,7 +48,9 @@ export const Layout = ({ children }: { children: ReactNode }) => {
 const Navbar = () => {
   return (
     <div className='flex justify-between items-center'>
-      <img src={URL.HEADOUT_LOGO} alt='headout-logo'  />
+      <Link href='/'>
+        <img src={URL.HEADOUT_LOGO} alt='headout-logo' width={185} style={{cursor:'pointer'}} />
+      </Link>
       <div className='flex gap-8 items-center'>
         <IconTitle Icon={VscGlobe} title={CONTENT.NAV_LINKS.ENGLISH} />
         <IconTitle Icon={CgDollar} title={CONTENT.NAV_LINKS.USD} />
