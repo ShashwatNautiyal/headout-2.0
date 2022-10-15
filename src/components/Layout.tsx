@@ -6,7 +6,7 @@ import { BiHelpCircle } from 'react-icons/bi';
 import { AiOutlineMenu } from 'react-icons/ai';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { classNames } from '../utils';
+import { classNames } from '../utils/helpers';
 
 const URL = {
   HEADOUT_LOGO:
