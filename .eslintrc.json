@@ -1,6 +1,8 @@
 {
   "extends": "next/core-web-vitals",
   "rules": {
-    "no-unused-vars": "error"
+    "no-unused-vars": "error",
+    "no-trailing-spaces": "warn",
+    "@next/next/no-img-element": "off"
   }
 }
