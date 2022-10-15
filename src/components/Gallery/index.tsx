@@ -21,6 +21,8 @@ export const Gallery = ({ searchResults }: { searchResults: Search }) => {
     travelerBadgeClassname
   ];
 
+  const BADGE = ['Nomad', 'Wander', 'Explorer', 'Traveller'];
+
   return (
     <div className='grid md:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-5 w-full mb-8'>
       {results?.map((resultPhoto, index) => (
@@ -60,7 +62,7 @@ export const Gallery = ({ searchResults }: { searchResults: Search }) => {
                 </div>
               </div>
               <div className='h-fit'>
-                <div>
+                <div className='text-base leading-5 font-medium'>
                   {resultPhoto.description?.length > 100
                     ? resultPhoto.description?.substring(0, 100).concat('...')
                     : resultPhoto.description}
@@ -77,5 +79,3 @@ export const Gallery = ({ searchResults }: { searchResults: Search }) => {
     </div>
   );
 };
-
-const BADGE = ['Nomad', 'Wander', 'Explorer', 'Traveller'];

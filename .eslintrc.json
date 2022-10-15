@@ -1,7 +1,7 @@
 {
   "extends": "next/core-web-vitals",
   "rules": {
-    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "no-unused-vars": ["error", { "args": "after-used" }],
     "no-trailing-spaces": "warn",
     "@next/next/no-img-element": "off"
   }
