@@ -10,7 +10,7 @@ import { classNames } from '../utils/helpers';
 
 const URL = {
   HEADOUT_LOGO:
-    'https://cdn-imgix-open.headout.com/logo/svg/Headout_logo_purps.svg?w=450&h=75&fm=svg&auto=compress%2Cformat&crop=faces&fit=min',
+    '/headoutLogo.png',
   PROFILE_PICTURE: 'https://static.toiimg.com/photo/65675521.cms'
 };
 
@@ -48,7 +48,7 @@ export const Layout = ({ children }: { children: ReactNode }) => {
 const Navbar = () => {
   return (
     <div className='flex justify-between items-center'>
-      <img src={URL.HEADOUT_LOGO} alt='headout-logo' className='h-[24px] w-[150px]' />
+      <img src={URL.HEADOUT_LOGO} alt='headout-logo'  />
       <div className='flex gap-8 items-center'>
         <IconTitle Icon={VscGlobe} title={CONTENT.NAV_LINKS.ENGLISH} />
         <IconTitle Icon={CgDollar} title={CONTENT.NAV_LINKS.USD} />
