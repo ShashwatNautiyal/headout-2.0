@@ -1,11 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { Search } from '../../utils/types/search'
+import Image from '../Image';
 import style from "./reviews.module.css"
 import Star from './star'
 
+const UNSPLASH_API_KEY = 'pRrZXfPJRI3fi3Bo5s8gwJz7VGgaRh3ZAGapWAaO2vA';
 const Review = (props: any) => {
   const { review } = props
+  const { profile_image, profile_name, review: reviewText,location } = review
+  const [data, setData] = useState<Search | undefined>(undefined)
+  
+  useEffect(() => {
+    const fetchData=async ()=>{
+      const result = await fetch(`https://api.unsplash.com/search/photos?per_page=3&query=${location ?? 'india'}&client_id=${UNSPLASH_API_KEY}`).then((res) => res.json());
+      setData(result)
+    }
+    fetchData()
+  }, [])
+  
 
-  const { profile_image, profile_name, review: reviewText } = review
+  
   return (
       <div className='my-16'>
           <div className={style.profile}>
@@ -25,10 +39,17 @@ const Review = (props: any) => {
                       <Star />
                       <Star />
                 </div>
-              </div>
+        </div>
           </div>
           <div className={style.review}>
-              {reviewText}
+        {reviewText}
+        <div className='grid grid-cols-3 gap-3 mt-7'>
+          {
+          data?.results.map((image, idx) => (
+            <Image key={idx} alt='img' src={image.urls.small} loading='eager' imageCustomStyles={{width:300,height:200}} />
+          ))
+        }
+        </div>
             </div>
     </div>
   )
