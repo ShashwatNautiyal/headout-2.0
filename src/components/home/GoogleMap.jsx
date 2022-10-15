@@ -504,7 +504,7 @@ function GoogleMap() {
         { lat: 37.752986, lng: -122.40311199999996 },
         { lat: 37.751266, lng: -122.40335500000003 }
     ];
-    return <Map data={data} center={{ lat: -24.9923319, lng: 135.2252427 }} />;
+    return <Map data={data} center={{ lat: -37.771352, lng: 122.40434600000003 }} />;
 }
 
 export default GoogleMap;
