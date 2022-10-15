@@ -19,11 +19,6 @@ class MapContainer extends React.Component {
             "rgba(191, 0, 31, 1)",
             "rgba(255, 0, 0, 1)"
         ];
-        const data = [
-            { lat: 37.782551, lng: -122.44536800000003 },
-            { lat: 37.782745, lng: -122.44458600000002 },
-            { lat: 37.782842, lng: -122.44368800000001 },
-        ]
         
         return (
             <div className="map-container" >
@@ -37,14 +32,14 @@ class MapContainer extends React.Component {
                     <HeatMap
                         gradient={gradient}
                         positions={this.props.data}
-                        opacity={0.5}
-                        radius={20}
+                        opacity={0.6}
+                        radius={23}
                     />
-                    {
+                    {/* {
                         this.props.data.map((ele, ind) => {
                             return <Marker key={ind} position={{ lat: ele.lat, lng: ele.lng }} title={"Disney Land"} />
                         })
-                    }
+                    } */}
                 </Map>
             </div>
         );
