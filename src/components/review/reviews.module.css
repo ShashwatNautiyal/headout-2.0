@@ -1,0 +1,23 @@
+.profile{
+    display: flex;
+}
+.profile__image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile__name{
+    margin-left: 10px;
+}
+.busterCards{
+    display: flex;
+    margin: 10px;
+}
+.profile__rating{
+    width: 130px;
+    height: 18px;
+    display: inline-flex;
+}
+.review{
+    font-weight: 100;
+}

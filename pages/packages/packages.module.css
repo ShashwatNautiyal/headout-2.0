@@ -1,0 +1,28 @@
+.left{
+    float: left;
+    width: 72%;
+}
+
+.right{
+    float: right;
+    width: 25%;
+    text-align: center;
+}
+
+.rightTop{
+    border: 1px solid #e2e2e2;
+    border-radius: 10px;
+    padding: 7px ß0px;
+    font-size: 14px;
+    color: #666666;
+}
+
+.rightTopText{
+    padding: 10px;
+}
+
+.rightTopContent{
+    border-top: 1px solid #e2e2e2;
+    padding: 10px;
+    text-align: left;
+}
