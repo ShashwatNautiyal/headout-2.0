@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "name": "John",
+    "badge": 1,
+    "stars": 4,
+    "date": "2022-10-15T15:37:33.024Z",
+    "package": "Disneyland® Paris 1 Day Ticket",
+    "location": "Paris",
+    "description": "It was like dream come true! From the entry to the end all fun and excitement. Games and Rides for all ages. Time just disspeared ! Will do it again soon!"
+  },
+  {
+    "id": "2",
+    "name": "Mary",
+    "badge": 1,
+    "stars": 4,
+    "date": "2022-10-15T15:37:33.024Z",
+    "package": "Borghese Gallery Entrance Tickets",
+    "location": "Japan",
+    "description": "Skydiving experience was such a fun and it still seems like a dream. Last week my booking was cancelled 4 times due to windy weather."
+  },
+  {
+    "id": "3",
+    "name": "Peter",
+    "badge": 1,
+    "stars": 4,
+    "date": "2022-10-15T15:37:33.024Z",
+    "package": "Mamma Mia!",
+    "location": "India",
+    "description": "Must-visit place! Definitely recommend Headout for booking"
+  }
+]
