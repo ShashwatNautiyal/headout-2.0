@@ -1,5 +1,10 @@
+import CaraouselHome from '../src/components/home/CaraouselHome';
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <>
+      <CaraouselHome />
+    </>
+  );
 };
 
 export default Home;
