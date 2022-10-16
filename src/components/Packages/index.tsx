@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import styles from './packages.module.css';
@@ -8,9 +8,12 @@ import Star from '../review/star';
 import { IconType } from 'react-icons';
 import { BiMobileAlt } from 'react-icons/bi';
 import { AiOutlineClockCircle } from 'react-icons/ai';
-import StreetViewAR from '../StreetViewAR';
+import { TbAugmentedReality } from 'react-icons/tb';
+import VR from '../StreetViewAR/VR';
 
 const Packages = () => {
+  const [active, setActive] = useState(false);
+
   const imgStyle = {
     borderRadius: '15px',
     width: '100%',
@@ -57,14 +60,14 @@ const Packages = () => {
           <Star /> 4.9 ratings
         </div>
 
-        <div className='flex gap-8 items-center'>
+        <div className='flex gap-8 items-center mb-4'>
           <IconTitle Icon={BiMobileAlt} title={'Mobile Ticket'} />
           <IconTitle Icon={AiOutlineClockCircle} title={'Mobile Ticket'} />
-          <StreetViewAR />
-          <p>
-          <IconTitle Icon={AiOutlineClockCircle} title={'View in AR'} />
-          </p>
+          <div className='cursor-pointer' onClick={() => setActive(!active)}>
+            <IconTitle Icon={TbAugmentedReality} title={'View in AR'} />
+          </div>
         </div>
+        {active && <VR />}
         <div className='my-8 font-thin divide-y divide-dashed' style={{ color: '#444444' }}>
           Jump from 15,000 feet and freefall over Sydney in this thrilling one-of-a-kind experience.
           Get a bird’s-eye view of the city and its surroundings as you fall, and land on the

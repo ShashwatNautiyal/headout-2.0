@@ -3,13 +3,18 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Varta:wght@300;400;500;600;700&display=swap');
-textarea:focus, input:focus{
-    outline: 1px solid rgb(237, 237, 237);
-    padding: 10px;
+textarea:focus,
+input:focus {
+  outline: 1px solid rgb(237, 237, 237);
+  padding: 10px;
 }
 
-svg{
-    margin: 2px;
-    width: 20px;
-    height: 23px;
+svg {
+  margin: 2px;
+  width: 20px;
+  height: 23px;
+}
+
+.gm-style {
+  filter: invert(1) !important;
 }
