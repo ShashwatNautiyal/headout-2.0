@@ -7,7 +7,7 @@ class VR extends React.Component {
     const googleMapsApiKey = 'AIzaSyDpG-NeL-XGYAduQul2JenVr86HIPITEso';
 
     const streetViewPanoramaOptions = {
-      position: { lat: 46.9171876, lng: 17.8951832 },
+      position: { lat: 51.5032803, lng: -0.1196873 },
       pov: { heading: 100, pitch: 0 },
       zoom: 1,
       addressControl: false,

@@ -7,7 +7,7 @@ const StreetViewAR = () => {
     <>
       <button
         onClick={() => {
-          setActive(true);
+          setActive(!active);
         }}
         style={{fontSize: "1.5em"}}
       >
