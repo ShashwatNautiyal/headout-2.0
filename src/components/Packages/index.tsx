@@ -3,6 +3,12 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import styles from "./packages.module.css"
 import ReviewSection from '../../sections';
+import AddReviewPopup from './AddReviewPopup';
+import Star from '../review/star';
+import { IconType } from 'react-icons';
+import { BiMobileAlt } from 'react-icons/bi';
+import { AiOutlineClockCircle } from 'react-icons/ai';
+
 
 const Packages = () => {
     const imgStyle = {
@@ -26,6 +32,16 @@ const Packages = () => {
                     <img style={imgStyle} alt="img3" src="https://images.unsplash.com/photo-1520986606214-8b456906c813?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGxvbmRvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" />
                 </div>
                 </Carousel>
+                <h2 style={{ color: '#444444' }} className='text-2xl mt-10'>Tandem Skydive Wollongong - 15,000 ft</h2>
+                <div className='h-100 flex text-xl my-6'><Star /> 4.9 ratings</div>
+
+                <div className='flex gap-8 items-center'>
+                    <IconTitle Icon={BiMobileAlt} title={"Mobile Ticket"} />
+                    <IconTitle Icon={AiOutlineClockCircle} title={"Mobile Ticket"} />
+                </div>
+                <div className='my-8 font-thin divide-y divide-dashed' style={{ color: '#444444' }}>
+                    Jump from 15,000 feet and freefall over Sydney in this thrilling one-of-a-kind experience. Get a bird’s-eye view of the city and its surroundings as you fall, and land on the Wollongong beach safely with the help of the highly-trained staff and state-of-the-art equipment. Please Note: We are the official reseller of Skydive Australia.
+                </div>
                 <ReviewSection />
             </div>
             <div className={styles.right}>
@@ -37,9 +53,19 @@ const Packages = () => {
                 </div>
                 <div className={styles.rightBottom}>
                 </div>
+                <AddReviewPopup/>
             </div>
         </div>
         );
 }
+
+const IconTitle = ({ Icon, title }: { Icon: IconType; title: string }) => {
+  return (
+    <div className='flex text-gray-500 text-sm items-center font-light'>
+      <Icon />
+      <div className='ml-1'>{title}</div>
+    </div>
+  );
+};
 
 export default Packages
