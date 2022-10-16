@@ -9,6 +9,7 @@ import { IconType } from 'react-icons';
 import { BiMobileAlt } from 'react-icons/bi';
 import { AiOutlineClockCircle } from 'react-icons/ai';
 
+
 const Packages = () => {
   const imgStyle = {
     borderRadius: '15px',
@@ -69,11 +70,8 @@ const Packages = () => {
         <ReviewSection />
       </div>
       <div className={styles.right}>
-        <div className={styles.rightTop}>
-          <div className={styles.rightTopText}> Get 10% off with your Headout coins</div>
-          <div className={styles.rightTopContent}>
-            <h2>$40</h2>
-          </div>
+              <div className={styles.rightTop}>
+                  <img src={`/rightImage.png`} />
         </div>
         <div className={styles.rightBottom}></div>
         <AddReviewPopup />

@@ -20,7 +20,8 @@ export default function AddReviewPopup() {
         <button
           type='button'
           onClick={openModal}
-          className='rounded-md px-4 py-2 text-sm font-semibold text-white hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 bg-blue-500'
+          style={{ backgroundColor: '#8000ff' }}
+          className='rounded-md px-4 py-2 text-sm font-semibold text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75'
         >
           Add Review
         </button>
