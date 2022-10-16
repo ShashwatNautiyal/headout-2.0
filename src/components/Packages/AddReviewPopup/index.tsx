@@ -62,6 +62,11 @@ export default function AddReviewPopup() {
                     <p className="text-sm text-gray-500">
                       <textarea className='w-96 h-60' placeholder="Add your review here" />
                     </p>
+                    <div className="mt-3  font-medium text-green-700 dark:text-green-500 float-left text-xs">Hack Coins</div>
+                    <div className="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+                      <div className="bg-green-600 h-2.5 rounded-full dark:bg-green-500" style={{ width:`45%`}}></div>
+                    </div>
+
                     <form className="flex items-center space-x-6">
                         <label className="block my-5">
                             <span className="sr-only">Choose profile photo</span>
@@ -74,7 +79,7 @@ export default function AddReviewPopup() {
                             "/>
                                           </label>
                     </form>
-                                          <p style={{fontSize:13,textAlign:'left',color:'#778899'}} className='decoration-zinc-500 font-thin'>Tip: Review with pictures has higher chances to get featured</p>
+                                          {/* <p style={{fontSize:13,textAlign:'left',color:'#778899'}} className='decoration-zinc-500 font-thin'>Tip: Review with pictures has higher chances to get featured</p> */}
                   </div>
                   <div className="mt-4 justify-center items-center">
                     <button
@@ -103,4 +108,4 @@ export default function AddReviewPopup() {
 //       <div className='ml-1'>{title}</div>
 //     </div>
 //   );
-// };
+// 
