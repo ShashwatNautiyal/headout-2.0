@@ -1,4 +1,5 @@
 import React from 'react';
+// @ts-ignore
 import ReactStreetview from 'react-streetview';
 
 class VR extends React.Component {
