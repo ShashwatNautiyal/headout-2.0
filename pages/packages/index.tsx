@@ -1,9 +1,8 @@
-import React from 'react'
-import Packages from '../../src/components/Packages'
-const PackagesPage = () => {
-  return (
-    <Packages/>
-  )
-}
+import React from 'react';
+import Packages from '../../src/components/Packages';
 
-export default PackagesPage
+const PackagesPage = () => {
+  return <Packages />;
+};
+
+export default PackagesPage;
