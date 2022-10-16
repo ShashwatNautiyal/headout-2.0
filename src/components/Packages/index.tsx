@@ -8,7 +8,7 @@ import Star from '../review/star';
 import { IconType } from 'react-icons';
 import { BiMobileAlt } from 'react-icons/bi';
 import { AiOutlineClockCircle } from 'react-icons/ai';
-
+import StreetViewAR from '../StreetViewAR';
 
 const Packages = () => {
   const imgStyle = {
@@ -60,6 +60,10 @@ const Packages = () => {
         <div className='flex gap-8 items-center'>
           <IconTitle Icon={BiMobileAlt} title={'Mobile Ticket'} />
           <IconTitle Icon={AiOutlineClockCircle} title={'Mobile Ticket'} />
+          <StreetViewAR />
+          <p>
+          <IconTitle Icon={AiOutlineClockCircle} title={'View in AR'} />
+          </p>
         </div>
         <div className='my-8 font-thin divide-y divide-dashed' style={{ color: '#444444' }}>
           Jump from 15,000 feet and freefall over Sydney in this thrilling one-of-a-kind experience.
@@ -70,8 +74,8 @@ const Packages = () => {
         <ReviewSection />
       </div>
       <div className={styles.right}>
-              <div className={styles.rightTop}>
-                  <img src={`/rightImage.png`} />
+        <div className={styles.rightTop}>
+          <img src={`/rightImage.png`} />
         </div>
         <div className={styles.rightBottom}></div>
         <AddReviewPopup />
